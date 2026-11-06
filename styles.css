@@ -69,3 +69,17 @@ h1{font-size:clamp(42px,5.1vw,65px);line-height:1.08;letter-spacing:-2.8px;color
 .work-link{margin-left:auto;font-size:12px;font-weight:700;color:var(--teal);align-self:center}.work-link:hover{color:var(--navy)}
 .work-disclaimer{font-size:11px;color:var(--muted);margin:18px 0 0}
 @media(max-width:700px){.work-grid{grid-template-columns:1fr}}
+
+/* v2 refinements */
+.eyebrow,.section-kicker{font-size:13px;font-weight:700;letter-spacing:.2px;color:var(--teal)}
+.audience-card span{font-size:12px;letter-spacing:.2px}
+.hero h1{letter-spacing:-2.4px}
+.metric{font:inherit;text-align:left;background:#fff;cursor:pointer;transition:.15s}.metric:hover{border-color:#bfe3e0}.metric.on{border-color:var(--teal);box-shadow:0 0 0 2px rgba(22,166,161,.18);background:#f4fbfa}.metric:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+#heroSvg .hp{transition:d .5s}
+.team-card ul{list-style:none;padding:14px 0 0;margin:14px 0 0;border-top:1px solid var(--line);display:grid;gap:7px;font-size:12px;color:#53687b}.team-card li{padding-left:16px;position:relative}.team-card li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:2px;background:var(--teal)}
+.pricing-section{background:#fff}.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.price-card{border:1px solid var(--line);border-radius:10px;padding:24px 22px;background:#fff;display:flex;flex-direction:column}.price-card h3{font-size:15px;color:var(--navy);margin:0}
+.price{font:800 32px/1.1 Manrope;color:var(--navy);margin:14px 0 16px}.price small{display:block;font:600 11px "DM Sans";color:var(--muted);margin-top:4px}.price i{font:600 12px "DM Sans";color:var(--muted);font-style:normal}
+.price-card ul{list-style:none;padding:14px 0 0;margin:0;border-top:1px solid var(--line);display:grid;gap:8px;font-size:12px;color:#53687b}.price-card li{padding-left:16px;position:relative}.price-card li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:2px;background:var(--teal)}
+@media(max-width:900px){.price-grid{grid-template-columns:1fr 1fr}}@media(max-width:700px){.price-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

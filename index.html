@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://kumar-aditya-singh-01.github.io/MAS_EduData_Data_Services_and_Solutions/">
+  <meta property="og:title" content="MAS EduData | Education Data Analytics">
+  <meta property="og:url" content="https://kumar-aditya-singh-01.github.io/MAS_EduData_Data_Services_and_Solutions/">
+  <meta property="og:type" content="website">
   <meta name="theme-color" content="#102b49">
-  <meta name="description" content="MKS EduData provides education analytics, Power BI dashboards, MIS reporting and data automation for schools, colleges and institutes.">
-  <title>MKS EduData | Education Data Analytics</title>
+  <meta name="description" content="MAS EduData provides education analytics, Power BI dashboards, MIS reporting and data automation for schools, colleges and institutes.">
+  <title>MAS EduData | Education Data Analytics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,9 +18,9 @@
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="MKS EduData home">
-        <img src="assets/mks-edudata-logo.png" alt="MKS EduData logo" onerror="this.style.display='none'">
-        <span class="brand-fallback"><b>MKS</b><strong>EduData</strong><small>DATA SERVICES &amp; SOLUTIONS</small></span>
+      <a class="brand" href="#home" aria-label="MAS EduData home">
+        <img src="assets/mas-edudata-logo.png" alt="MAS EduData logo" onerror="this.style.display='none'">
+        <span class="brand-fallback"><b>MAS</b><strong>EduData</strong><small>DATA SERVICES &amp; SOLUTIONS</small></span>
       </a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
       <div class="nav-links">
@@ -25,6 +29,7 @@
         <a href="#work">Sample work</a>
         <a href="dashboards.html">Sample dashboards</a>
         <a href="#process">Our process</a>
+        <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#team">Team</a>
         <a class="nav-cta" href="#contact">Request a demo <span>↗</span></a>
@@ -37,12 +42,12 @@
       <div class="hero-glow"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="pulse"></span> EDUCATION • ANALYTICS • AUTOMATION</div>
-          <h1>Turn education data into <em>better decisions.</em></h1>
+          <div class="eyebrow"><span class="pulse"></span> Education, analytics and automation</div>
+          <h1>Turn education data into better decisions.</h1>
           <p class="hero-text">Clear dashboards. Useful insights. Less manual reporting. We help schools, colleges and learning institutes make better use of the data they already collect.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Discuss your requirements <span>→</span></a>
-            <a class="button button-quiet" href="#services">Explore services</a>
+            <a class="button button-quiet" href="dashboards.html">Try the sample dashboards</a>
           </div>
           <div class="hero-proof">
             <div class="proof-icon">✦</div>
@@ -53,25 +58,20 @@
           <div class="dashboard-top"><div><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><small>INSTITUTION OVERVIEW</small><span class="live-label">SAMPLE VIEW</span></div>
           <div class="dashboard">
             <div class="dash-heading"><div><small>PERFORMANCE SNAPSHOT</small><h3>Institute overview</h3></div><span class="period">Monthly view⌄</span></div>
-            <div class="metric-grid">
-              <div class="metric"><small>ENROLMENT</small><b>1,248</b><span class="positive">↗ Sample KPI</span></div>
-              <div class="metric"><small>ATTENDANCE</small><b>92.4%</b><span class="positive">↗ Sample KPI</span></div>
-              <div class="metric"><small>FEE COLLECTION</small><b>86.8%</b><span class="positive">↗ Sample KPI</span></div>
+            <div class="metric-grid" role="tablist" aria-label="Choose a metric">
+              <button class="metric on" data-m="enrol" role="tab" aria-selected="true"><small>ENROLMENT</small><b>1,248</b><span class="positive">View trend</span></button>
+              <button class="metric" data-m="att" role="tab" aria-selected="false"><small>ATTENDANCE</small><b>92.4%</b><span class="positive">View trend</span></button>
+              <button class="metric" data-m="fee" role="tab" aria-selected="false"><small>FEE COLLECTION</small><b>86.8%</b><span class="positive">View trend</span></button>
             </div>
             <div class="chart-card">
-              <div class="chart-title"><b>Monthly trend</b><small>Illustrative data</small></div>
+              <div class="chart-title"><b id="heroTitle">Enrolment, last 6 months</b><small>Illustrative data</small></div>
               <div class="chart">
-                <div class="chart-y"><span>100</span><span>75</span><span>50</span><span>25</span></div>
-                <svg viewBox="0 0 520 170" role="img" aria-label="Illustrative rising monthly trend line">
-                  <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#16b7ae" stop-opacity=".28"/><stop offset="1" stop-color="#16b7ae" stop-opacity="0"/></linearGradient></defs>
-                  <path d="M0 132 C48 118 54 104 100 110 S158 85 200 94 S260 54 300 69 S360 45 400 51 S470 22 520 28 L520 170 L0 170Z" fill="url(#area)"/>
-                  <path d="M0 132 C48 118 54 104 100 110 S158 85 200 94 S260 54 300 69 S360 45 400 51 S470 22 520 28" fill="none" stroke="#16b7ae" stroke-width="4" stroke-linecap="round"/>
-                  <g fill="#16b7ae"><circle cx="100" cy="110" r="4"/><circle cx="200" cy="94" r="4"/><circle cx="300" cy="69" r="4"/><circle cx="400" cy="51" r="4"/><circle cx="520" cy="28" r="4"/></g>
-                </svg>
+                <div class="chart-y" id="heroY"><span>1,260</span><span>1,200</span><span>1,150</span><span>1,100</span></div>
+                <svg viewBox="0 0 520 170" role="img" aria-label="Sample monthly trend for the selected metric" id="heroSvg"></svg>
               </div>
               <div class="chart-x"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
             </div>
-            <div class="dash-bottom"><span><i class="key teal"></i>Attendance</span><span><i class="key blue"></i>Enrolment</span><span class="sample-note">Illustrative figures only</span></div>
+            <div class="dash-bottom"><span><i class="key teal"></i>Attendance</span><span><i class="key blue"></i>Enrolment</span><span class="sample-note">Sample data. Select a metric above.</span></div>
           </div>
           <div class="float-chip"><span>↗</span><div><b>Insight-led</b><small>Management reporting</small></div></div>
         </div>
@@ -81,8 +81,8 @@
 
     <section class="section intro" id="about">
       <div class="container two-col">
-        <div><div class="section-kicker">ABOUT MKS EDUDATA</div><h2>Make your data work as hard as your team.</h2></div>
-        <div class="intro-copy"><p>MKS EduData provides education-focused data analytics, business intelligence and reporting support. We help institutions organise information and turn it into clear reports that support day-to-day decisions.</p><p>Whether your records live in spreadsheets or approved database exports, we start by understanding your workflow and build a solution around your needs.</p></div>
+        <div><div class="section-kicker">About mas edudata</div><h2>Make your data work as hard as your team.</h2></div>
+        <div class="intro-copy"><p>MAS EduData provides education-focused data analytics, business intelligence and reporting support. We help institutions organise information and turn it into clear reports that support day-to-day decisions.</p><p>Whether your records live in spreadsheets or approved database exports, we start by understanding your workflow and build a solution around your needs.</p></div>
       </div>
       <div class="container value-strip">
         <div><span class="value-icon">◎</span><b>Clarity</b><small>Easy-to-understand reporting</small></div>
@@ -94,7 +94,7 @@
 
     <section class="section services-section" id="services">
       <div class="container">
-        <div class="section-heading"><div><div class="section-kicker">WHAT WE DO</div><h2>Analytics services for every stage of learning.</h2></div><p>Start with one reporting challenge. Build towards a clearer view of your institution.</p></div>
+        <div class="section-heading"><div><div class="section-kicker">What we do</div><h2>Analytics services for every stage of learning.</h2></div><p>Start with one reporting challenge. Build towards a clearer view of your institution.</p></div>
         <div class="service-grid">
           <article class="service-card"><div class="service-icon">◫</div><h3>Student analytics</h3><p>Understand enrolment, class strength, active records and student retention trends.</p><ul><li>Enrolment summaries</li><li>Class-wise reports</li><li>Active / inactive tracking</li></ul></article>
           <article class="service-card"><div class="service-icon">◷</div><h3>Attendance analytics</h3><p>Spot attendance patterns and identify where follow-up may be needed.</p><ul><li>Daily and monthly trends</li><li>Class comparisons</li><li>Absenteeism analysis</li></ul></article>
@@ -108,26 +108,26 @@
 
     <section class="section solutions-section" id="solutions">
       <div class="container">
-        <div class="section-heading"><div><div class="section-kicker">BUILT FOR YOUR INSTITUTION</div><h2>One approach. Different education needs.</h2></div><p>We shape each engagement around your institution's size, records and reporting priorities.</p></div>
+        <div class="section-heading"><div><div class="section-kicker">Built for your institution</div><h2>One approach. Different education needs.</h2></div><p>We shape each engagement around your institution's size, records and reporting priorities.</p></div>
         <div class="audience-grid">
-          <div class="audience-card"><span>01 / SCHOOL</span><h3>Schools</h3><p>Student strength, attendance, fee tracking and academic performance.</p></div>
-          <div class="audience-card"><span>02 / HIGHER EDUCATION</span><h3>Colleges &amp; universities</h3><p>Department reporting, enrolment, examination trends and placement analysis.</p></div>
-          <div class="audience-card"><span>03 / COACHING</span><h3>Coaching centres</h3><p>Enquiries, admissions, course demand, counsellor and collection reports.</p></div>
-          <div class="audience-card"><span>04 / LEARNING</span><h3>Tuition &amp; training</h3><p>Learner records, attendance, payments and progress summaries.</p></div>
+          <div class="audience-card"><span>K–12</span><h3>Schools</h3><p>Student strength, attendance, fee tracking and academic performance.</p></div>
+          <div class="audience-card"><span>Higher education</span><h3>Colleges &amp; universities</h3><p>Department reporting, enrolment, examination trends and placement analysis.</p></div>
+          <div class="audience-card"><span>Test preparation</span><h3>Coaching centres</h3><p>Enquiries, admissions, course demand, counsellor and collection reports.</p></div>
+          <div class="audience-card"><span>Training</span><h3>Tuition &amp; training</h3><p>Learner records, attendance, payments and progress summaries.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section work-section" id="work">
       <div class="container">
-        <div class="section-heading"><div><div class="section-kicker">SAMPLE WORK</div><h2>Dashboards built to answer real management questions.</h2></div><p>Explore four demonstration projects. Each one uses fictional data to show what we can build for your institution.</p></div>
+        <div class="section-heading"><div><div class="section-kicker">Sample work</div><h2>Dashboards built to answer real management questions.</h2></div><p>Explore eight demonstration projects. Each one uses fictional data to show what we can build for your institution.</p></div>
         <div class="stat-row">
-          <div><b>4</b><small>Interactive sample dashboards</small></div>
+          <div><b>8</b><small>Interactive sample dashboards</small></div>
           <div><b>5</b><small>Analytics areas: students, attendance, fees, admissions, academics</small></div>
           <div><b>4</b><small>Institution types supported</small></div>
         </div>
         <div class="work-grid">
-          <article class="work-card"><span class="work-tag">Schools · Management overview</span><h3>School management overview</h3><p>One view of student strength, attendance, class comparisons and exam results for principals and administrators.</p><div class="work-kpis"><span>Enrolment</span><span>Attendance</span><span>Avg score</span><span>Fees</span></div><p class="work-result"><b>Question answered:</b> Which classes need attendance or academic follow-up?</p><div class="work-tools"><span>Excel</span><span>Power BI</span><a class="work-link" href="dashboards.html#school">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Coaching centres · Admissions</span><h3>Coaching centre performance</h3><p>Tracks enquiries through to admission, with lead sources, course demand, counsellor results and collections.</p><div class="work-kpis"><span>Enquiries</span><span>Conversion</span><span>Lead sources</span><span>Collections</span></div><p class="work-result"><b>Question answered:</b> Which sources and courses are driving admissions?</p><div class="work-tools"><span>Excel</span><span>SQL</span><span>Power BI</span><a class="work-link" href="dashboards.html#coach">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools and institutes · Finance</span><h3>Fee collection and dues tracker</h3><p>Compares expected and collected fees, shows pending balances by class and ages overdue payments.</p><div class="work-kpis"><span>Collection rate</span><span>Dues ageing</span><span>Payment modes</span></div><p class="work-result"><b>Question answered:</b> Which classes have the most pending dues and need reminders?</p><div class="work-tools"><span>Excel</span><span>Power BI</span><a class="work-link" href="dashboards.html#fees">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools and colleges · Academics</span><h3>Academic results analysis</h3><p>Reviews subject-wise pass rates, grade distribution, class comparisons and exam-by-exam trends.</p><div class="work-kpis"><span>Pass rate</span><span>Grades</span><span>Class comparison</span><span>Exam trend</span></div><p class="work-result"><b>Question answered:</b> Which classes and subjects need academic support?</p><div class="work-tools"><span>Excel</span><span>Python</span><span>Power BI</span><a class="work-link" href="dashboards.html#results">Open dashboard →</a></div></article>
+          <article class="work-card"><span class="work-tag">Schools · Management overview</span><h3>School management overview</h3><p>One view of student strength, attendance, class comparisons and exam results for principals and administrators.</p><div class="work-kpis"><span>Enrolment</span><span>Attendance</span><span>Avg score</span><span>Fees</span></div><p class="work-result"><b>Question answered:</b> Which classes need attendance or academic follow-up?</p><div class="work-tools"><span>Excel</span><span>Power BI</span><a class="work-link" href="dashboards.html#school">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Coaching centres · Admissions</span><h3>Coaching centre performance</h3><p>Tracks enquiries through to admission, with lead sources, course demand, counsellor results and collections.</p><div class="work-kpis"><span>Enquiries</span><span>Conversion</span><span>Lead sources</span><span>Collections</span></div><p class="work-result"><b>Question answered:</b> Which sources and courses are driving admissions?</p><div class="work-tools"><span>Excel</span><span>SQL</span><span>Power BI</span><a class="work-link" href="dashboards.html#coach">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools and institutes · Finance</span><h3>Fee collection and dues tracker</h3><p>Compares expected and collected fees, shows pending balances by class and ages overdue payments.</p><div class="work-kpis"><span>Collection rate</span><span>Dues ageing</span><span>Payment modes</span></div><p class="work-result"><b>Question answered:</b> Which classes have the most pending dues and need reminders?</p><div class="work-tools"><span>Excel</span><span>Power BI</span><a class="work-link" href="dashboards.html#fees">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools and colleges · Academics</span><h3>Academic results analysis</h3><p>Reviews subject-wise pass rates, grade distribution, class comparisons and exam-by-exam trends.</p><div class="work-kpis"><span>Pass rate</span><span>Grades</span><span>Class comparison</span><span>Exam trend</span></div><p class="work-result"><b>Question answered:</b> Which classes and subjects need academic support?</p><div class="work-tools"><span>Excel</span><span>Python</span><span>Power BI</span><a class="work-link" href="dashboards.html#results">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools · Enrolment</span><h3>Enrolment and retention</h3><p>Tracks admissions, exits and retention by class so leaders can see where students are joining and leaving.</p><div class="work-kpis"><span>Strength</span><span>New admissions</span><span>Retention</span></div><p class="work-result"><b>Question answered:</b> Where are we gaining and losing students?</p><div class="work-tools"><span>Excel</span><span>Power BI</span><a class="work-link" href="dashboards.html#enrol">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools · Attendance</span><h3>Attendance heatmap</h3><p>A class-by-weekday grid that shows exactly where and when attendance slips.</p><div class="work-kpis"><span>Weekday pattern</span><span>Class gaps</span><span>Flags</span></div><p class="work-result"><b>Question answered:</b> Which days and classes have attendance gaps?</p><div class="work-tools"><span>Excel</span><span>Python</span><a class="work-link" href="dashboards.html#heat">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Colleges · Placements</span><h3>Placement analysis</h3><p>Placement rates, packages and sectors by department and year.</p><div class="work-kpis"><span>Placement rate</span><span>Avg package</span><span>Sectors</span></div><p class="work-result"><b>Question answered:</b> Which departments need placement support?</p><div class="work-tools"><span>Excel</span><span>SQL</span><span>Power BI</span><a class="work-link" href="dashboards.html#place">Open dashboard →</a></div></article><article class="work-card"><span class="work-tag">Schools · Student support</span><h3>Student watchlist</h3><p>A searchable, sortable list that flags students with attendance, score or fee concerns.</p><div class="work-kpis"><span>Risk flags</span><span>Search</span><span>Sort</span></div><p class="work-result"><b>Question answered:</b> Which students need follow-up first?</p><div class="work-tools"><span>Excel</span><span>Python</span><a class="work-link" href="dashboards.html#risk">Open dashboard →</a></div></article>
         </div>
         <p class="work-disclaimer">All dashboards use fictional sample data and are not client results. We will add case studies here as client projects are completed, with permission.</p>
       </div>
@@ -135,7 +135,7 @@
 
     <section class="section process-section" id="process">
       <div class="container">
-        <div class="section-kicker">HOW WE WORK</div><h2>A clear process, from question to insight.</h2>
+        <div class="section-kicker">How we work</div><h2>A clear process, from question to insight.</h2>
         <div class="process-grid">
           <div><b>01</b><h3>Discover</h3><p>Understand your goals, current reports and management questions.</p></div>
           <div><b>02</b><h3>Prepare</h3><p>Review authorised data, quality and agreed KPI definitions.</p></div>
@@ -146,24 +146,37 @@
       </div>
     </section>
 
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-heading"><div><div class="section-kicker">Engagement options</div><h2>Clear, scoped introductory pricing.</h2></div><p>Indicative prices for small, clearly scoped projects. A final quote follows a review of your requirements, data and volume.</p></div>
+        <div class="price-grid">
+          <article class="price-card"><h3>Starter Dashboard</h3><div class="price">₹2,999<small>one-time</small></div><ul><li>One dashboard</li><li>Basic data cleaning</li><li>Up to 5 agreed KPIs</li><li>PDF report and handover</li></ul></article>
+          <article class="price-card"><h3>Professional Analytics</h3><div class="price">₹5,999<small>one-time</small></div><ul><li>Up to 3 dashboard pages</li><li>Multiple agreed KPIs</li><li>Data transformation</li><li>Management summary</li></ul></article>
+          <article class="price-card"><h3>Complete Analytics</h3><div class="price"><i>from</i> ₹9,999<small>one-time</small></div><ul><li>Multiple dashboards</li><li>Admission, fee or attendance analysis</li><li>Advanced reporting</li><li>Automation where scoped</li></ul></article>
+          <article class="price-card"><h3>Monthly MIS Support</h3><div class="price"><i>from</i> ₹1,499<small>per month</small></div><ul><li>Agreed report updates</li><li>Data cleaning</li><li>Monthly performance summary</li><li>Defined support scope</li></ul></article>
+        </div>
+        <p class="work-disclaimer">Scope, deliverables, timelines, revision limits and fees are confirmed in writing. Clients provide authorised data. Online dashboard sharing may need separate software licences. <a class="work-link" href="assets/MAS_EduData_Company_Portfolio.pdf" target="_blank" rel="noopener">Download the full proposal (PDF)</a></p>
+      </div>
+    </section>
+
     <section class="section tools-section">
-      <div class="container tools-inner"><div><div class="section-kicker">OUR TOOLKIT</div><h2>Tools chosen for the job.</h2><p>We select tools based on your existing systems, data format, access requirements and reporting needs.</p></div><div class="tool-list"><span>Microsoft Excel</span><span>Power BI</span><span>SQL / MySQL</span><span>Python</span><span>Google Sheets</span></div></div>
+      <div class="container tools-inner"><div><div class="section-kicker">Our toolkit</div><h2>Tools chosen for the job.</h2><p>We select tools based on your existing systems, data format, access requirements and reporting needs.</p></div><div class="tool-list"><span>Microsoft Excel</span><span>Power BI</span><span>SQL / MySQL</span><span>Python</span><span>Google Sheets</span></div></div>
     </section>
 
     <section class="section team-section" id="team">
       <div class="container">
-        <div class="section-heading"><div><div class="section-kicker">MEET THE TEAM</div><h2>Three founders, one clear focus.</h2></div><p>Delivery, client relationships and day-to-day operations, covered by the people you speak to.</p></div>
+        <div class="section-heading"><div><div class="section-kicker">Meet the team</div><h2>Three founders, one clear focus.</h2></div><p>Delivery, client relationships and day-to-day operations, covered by the people you speak to.</p></div>
         <div class="team-grid">
-          <article class="team-card"><div class="avatar">KS</div><h3>Kumar Aditya Singh</h3><b>Founder</b><p>Head of Development and Services</p></article>
-          <article class="team-card"><div class="avatar">MJ</div><h3>Manav Kumar Jha</h3><b>Co-founder</b><p>Head of Finance and Client Management</p></article>
-          <article class="team-card"><div class="avatar">ST</div><h3>Sanvi Thakur</h3><b>Co-founder</b><p>Head of HR, Operations and Admin</p></article>
+          <article class="team-card"><div class="avatar">KS</div><h3>Kumar Aditya Singh</h3><b>Founder</b><p>Head of Development and Services</p><ul><li>Solution design and dashboard development</li><li>Service delivery and output quality</li></ul></article>
+          <article class="team-card"><div class="avatar">MJ</div><h3>Manav Kumar Jha</h3><b>Founder</b><p>Head of Finance and Client Management</p><ul><li>Client communication and engagement</li><li>Quotations, fees and commercial terms</li></ul></article>
+          <article class="team-card"><div class="avatar">ST</div><h3>Sanvi Thakur</h3><b>Founder</b><p>Head of HR, Operations and Admin</p><ul><li>Team coordination and HR</li><li>Operations, documentation and administration</li></ul></article>
         </div>
       </div>
     </section>
 
     <section class="section contact-section" id="contact">
       <div class="container contact-grid">
-        <div><div class="section-kicker">LET'S TALK DATA</div><h2>What would you like to understand about your institution?</h2><p>Tell us about your reporting challenge. We can discuss a suitable first step or arrange a sample dashboard walkthrough.</p><ul class="contact-list"><li><small>Email</small><a href="mailto:kumaradityasingh101@gmail.com">kumaradityasingh101@gmail.com</a></li><li><small>Phone</small><a href="tel:+917493979101">+91 74939 79101</a></li><li><small>Location</small><span>Delhi, India</span></li></ul>
+        <div><div class="section-kicker">Let's talk data</div><h2>What would you like to understand about your institution?</h2><p>Tell us about your reporting challenge. We can discuss a suitable first step or arrange a sample dashboard walkthrough.</p><ul class="contact-list"><li><small>Email</small><a href="mailto:kumaradityasingh101@gmail.com">kumaradityasingh101@gmail.com</a></li><li><small>Phone</small><a href="tel:+917493979101">+91 74939 79101</a></li><li><small>Website</small><a href="https://kumar-aditya-singh-01.github.io/MAS_EduData_Data_Services_and_Solutions/">kumar-aditya-singh-01.github.io</a></li><li><small>Location</small><span>Delhi, India</span></li></ul>
         <div class="contact-note"><span>✦</span> No one-size-fits-all dashboards. Start with the question you need answered.</div></div>
         <form class="contact-form" id="contactForm">
           <label for="name">Your name</label><input id="name" name="name" required placeholder="Name">
@@ -181,11 +194,11 @@
 
   <footer class="footer">
     <div class="container footer-main">
-      <div><a class="footer-brand" href="#home">MKS <span>EduData</span></a><p>DATA SERVICES &amp; SOLUTIONS</p><small>Turning Educational Data into Better Decisions.</small></div>
-      <div class="footer-links"><a href="#services">Services</a><a href="#solutions">Who we support</a><a href="#work">Sample work</a><a href="#process">Our process</a><a href="#team">Team</a><a href="#contact">Contact</a></div>
-      <div class="footer-contact"><b>Start a conversation</b><a href="dashboards.html">Sample dashboards ↗</a><a href="#contact">Request a demo ↗</a><a href="mailto:kumaradityasingh101@gmail.com">kumaradityasingh101@gmail.com</a><a href="tel:+917493979101">+91 74939 79101</a><a href="assets/MKS_EduData_Company_Portfolio.pdf" target="_blank" rel="noopener">View company portfolio ↗</a></div>
+      <div><a class="footer-brand" href="#home">MAS <span>EduData</span></a><p>DATA SERVICES &amp; SOLUTIONS</p><small>Turning Educational Data into Better Decisions.</small></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#solutions">Who we support</a><a href="#work">Sample work</a><a href="#process">Our process</a><a href="#pricing">Pricing</a><a href="#team">Team</a><a href="#contact">Contact</a></div>
+      <div class="footer-contact"><b>Start a conversation</b><a href="dashboards.html">Sample dashboards ↗</a><a href="#contact">Request a demo ↗</a><a href="mailto:kumaradityasingh101@gmail.com">kumaradityasingh101@gmail.com</a><a href="tel:+917493979101">+91 74939 79101</a><a href="assets/MAS_EduData_Company_Portfolio.pdf" target="_blank" rel="noopener">View company portfolio ↗</a></div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> MKS EduData. All rights reserved.</span><span>DELHI, INDIA • EDUCATION • ANALYTICS • AUTOMATION</span></div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> MAS EduData. All rights reserved.</span><span>DELHI, INDIA • EDUCATION • ANALYTICS • AUTOMATION</span></div>
   </footer>
   <script src="script.js"></script>
 </body>

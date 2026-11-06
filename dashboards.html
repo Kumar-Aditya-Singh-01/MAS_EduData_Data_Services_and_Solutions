@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sample Dashboards | MKS EduData</title>
-<meta name="description" content="Four interactive sample dashboards by MKS EduData, built on fictional data: school overview, coaching centre, fee collection and academic results.">
+<title>Sample Dashboards | MAS EduData</title>
+<meta name="description" content="Eight interactive sample dashboards by MAS EduData, built on fictional data: school overview, coaching centre, fee collection and academic results.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -37,22 +37,39 @@ table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;p
 .q{margin-top:12px;font-size:12px;color:var(--navy);background:#fff;border-left:3px solid var(--teal);padding:10px 14px;border-radius:0 8px 8px 0}
 .wide{grid-column:1/-1}
 @media(max-width:800px){.grid{grid-template-columns:1fr}.hb{grid-template-columns:76px 1fr 48px}}
+.ctl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:12px;color:var(--navy)}
+.ctl label{display:flex;gap:8px;align-items:center;font-weight:700}.ctl output{color:var(--teal);min-width:22px}
+.ctl select{font:600 12px "DM Sans",sans-serif;border:1px solid #d7e2e9;border-radius:6px;padding:7px 9px;color:var(--navy);background:#fff}
+.ctl input[type=range]{accent-color:var(--teal);width:110px}.ctl .sp{flex:1}
+.seg{display:flex;border:1px solid #d7e2e9;border-radius:7px;overflow:hidden}.seg button{border:0;background:#fff;font:700 12px "DM Sans",sans-serif;color:var(--navy);padding:7px 12px;cursor:pointer}.seg button[aria-pressed=true]{background:var(--navy);color:#fff}
+.mini{border:1px solid #d7e2e9;background:#fff;color:var(--navy);font:700 12px "DM Sans",sans-serif;padding:7px 12px;border-radius:7px;cursor:pointer}.mini:hover{border-color:var(--teal);color:var(--teal)}
+.hb.pick{cursor:pointer;border-radius:6px;padding:2px 6px;margin-inline:-6px}.hb.pick:hover{background:#f1f7f8}.hb.sel{background:#e2f5f3;outline:1px solid var(--teal)}
+.mk:hover{opacity:.75}.sort{border:0;background:none;font:inherit;color:inherit;cursor:pointer;padding:0}.sort:hover{color:var(--teal)}
+.ctl select:focus-visible,.ctl button:focus-visible,.hb.pick:focus-visible,.sort:focus-visible,.tab:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media print{.site-header,.tabs,.ctl,.footer{display:none}.dash:not(.on){display:none}.page{padding:10px}}
+table.heat th{text-align:center;font-weight:700}table.heat th:first-child{text-align:left}table.heat td{padding:3px;border:0}table.heat td:not(:first-child){text-align:center}.cell{width:100%;border:0;border-radius:6px;padding:9px 0;font:700 12px "DM Sans";color:var(--navy);cursor:pointer}.cell.sel{outline:2px solid var(--navy)}
+.scroll{overflow-x:auto;max-height:420px}.lv{font-size:11px;padding:2px 8px;border-radius:10px;background:#e2f5f3;color:var(--teal)}.lv.H{background:#fde7d3;color:#a34a08}.lv.W{background:#fff3cf;color:#8a6500}
+.ctl input[type=search]{font:600 12px "DM Sans";border:1px solid #d7e2e9;border-radius:6px;padding:7px 9px;width:130px}
 </style>
 </head>
 <body>
 <header class="site-header"><nav class="nav container" aria-label="Main navigation">
-<a class="brand" href="index.html"><img src="assets/mks-edudata-logo.png" alt="MKS EduData logo" onerror="this.style.display='none'"><span class="brand-fallback"><b>MKS</b><strong>EduData</strong><small>DATA SERVICES &amp; SOLUTIONS</small></span></a>
+<a class="brand" href="index.html"><img src="assets/mas-edudata-logo.png" alt="MAS EduData logo" onerror="this.style.display='none'"><span class="brand-fallback"><b>MAS</b><strong>EduData</strong><small>DATA SERVICES &amp; SOLUTIONS</small></span></a>
 <div class="nav-links" style="display:flex"><a href="index.html">Back to website</a><a class="nav-cta" href="index.html#contact">Request a demo <span>↗</span></a></div>
 </nav></header>
 <main class="page"><div class="container">
 <h1>Sample dashboards</h1>
-<p class="lead">Four demonstration dashboards showing the kind of reporting we build. Each one answers a specific management question.</p>
+<p class="lead">Eight demonstration dashboards showing the kind of reporting we build. Filter, click and sort them to see how clients can explore their own data. Each one answers a specific management question.</p>
 <span class="note">All figures are fictional sample data, not client results.</span>
 <div class="tabs" role="tablist">
 <button class="tab" role="tab" aria-selected="true" data-t="school">School management overview</button>
 <button class="tab" role="tab" aria-selected="false" data-t="coach">Coaching centre performance</button>
 <button class="tab" role="tab" aria-selected="false" data-t="fees">Fee collection</button>
 <button class="tab" role="tab" aria-selected="false" data-t="results">Academic results</button>
+<button class="tab" role="tab" aria-selected="false" data-t="enrol">Enrolment and retention</button>
+<button class="tab" role="tab" aria-selected="false" data-t="heat">Attendance heatmap</button>
+<button class="tab" role="tab" aria-selected="false" data-t="place">Placement analysis</button>
+<button class="tab" role="tab" aria-selected="false" data-t="risk">Student watchlist</button>
 </div>
 
 <section class="dash on" id="school">
@@ -119,64 +136,14 @@ table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;p
 </div>
 <div class="q"><b>Management question:</b> which classes and subjects need academic support? Classes 6B and 9A average below 70, and Math has the lowest pass rate.</div>
 </section>
+<section class="dash" id="enrol"><div class="kpis"></div><div class="grid"><div class="card"><h3>Enrolment trend</h3><p>Total students, by year</p><div id="e1"></div></div><div class="card"><h3>Admissions and exits</h3><p>New admissions vs students who left</p><div id="e2"></div></div><div class="card"><h3>Strength by class</h3><p>Click a class to drill down</p><div id="e3"></div></div><div class="card"><h3>Retention by class</h3><p>Orange means below the alert level</p><div id="e4"></div></div></div><div class="q"><b>Management question:</b> where are we gaining and losing students?</div></section>
+<section class="dash" id="heat"><div class="kpis"></div><div class="grid"><div class="card wide"><h3>Attendance by class and weekday</h3><p>Darker orange means lower attendance. Click a cell for detail.</p><div id="h1"></div></div><div class="card"><h3>Cell detail</h3><p></p><div id="h3"></div></div><div class="card"><h3>Average by weekday</h3><p></p><div id="h2"></div></div></div><div class="q"><b>Management question:</b> which days and classes have attendance gaps?</div></section>
+<section class="dash" id="place"><div class="kpis"></div><div class="grid"><div class="card"><h3>Placement rate by department</h3><p>Click a department to drill down</p><div id="p1"></div></div><div class="card"><h3>Placement rate by year</h3><p>Final-year batches</p><div id="p2"></div></div><div class="card"><h3>Offers by package band</h3><p>In lakh per annum (LPA)</p><div id="p3"></div></div><div class="card"><h3>Offers by sector</h3><p>Share of placed students</p><div id="p4"></div></div></div><div class="q"><b>Management question:</b> which departments need placement support?</div></section>
+<section class="dash" id="risk"><div class="kpis"></div><div class="grid"><div class="card wide"><h3>Students needing attention</h3><p>Fictional IDs only. A flag marks attendance below 85, score below 50 or dues of ₹5,000 or more. Sort by clicking a header.</p><div id="k1"></div></div><div class="card"><h3>High-risk students by class</h3><p>Click a class to filter the table</p><div id="k2"></div></div></div><div class="q"><b>Management question:</b> which students need follow-up first?</div></section>
 </div></main>
 
-<footer class="footer"><div class="container footer-bottom"><span>© <span id="year"></span> MKS EduData. Sample data is fictional.</span><span><a href="mailto:kumaradityasingh101@gmail.com">kumaradityasingh101@gmail.com</a> · +91 74939 79101</span></div></footer>
+<footer class="footer"><div class="container footer-bottom"><span>© <span id="year"></span> MAS EduData. Sample data is fictional.</span><span><a href="mailto:kumaradityasingh101@gmail.com">kumaradityasingh101@gmail.com</a> · +91 74939 79101</span></div></footer>
 
-<script>
-const T='#16a6a1',N='#102b49',O='#e0873a';
-const $=id=>document.getElementById(id);
-function cols(id,labels,series,max){
-  const W=420,H=190,p=28,n=labels.length,g=(W-p)/n,k=series.length,bw=Math.min(26,(g-8)/k);
-  let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
-  for(let i=0;i<=3;i++){const y=10+(H-45)*i/3;s+=`<line x1="${p}" x2="${W}" y1="${y}" y2="${y}" stroke="#edf1f4"/><text x="0" y="${y+3}" font-size="9" fill="#9aa7b2">${Math.round(max*(1-i/3))}</text>`}
-  labels.forEach((l,i)=>{series.forEach((se,j)=>{const v=se.v[i],h=(H-45)*v/max,x=p+g*i+(g-bw*k)/2+bw*j,y=H-35-h;
-    s+=`<rect x="${x}" y="${y}" width="${bw-2}" height="${h}" rx="3" fill="${se.c}"><title>${l}, ${se.n}: ${v}</title></rect>`;
-    if(k==1)s+=`<text x="${x+bw/2-1}" y="${y-4}" font-size="9" text-anchor="middle" fill="${N}">${v}</text>`});
-    s+=`<text x="${p+g*i+g/2}" y="${H-18}" font-size="9" text-anchor="middle" fill="#7b8a99">${l}</text>`});
-  $(id).innerHTML=s+'</svg>'+(k>1?'<div class="legend">'+series.map(x=>`<span style="--c:${x.c}">${x.n}</span>`).join('')+'</div>':'');
-}
-function line(id,labels,v,min,max,u='%'){
-  const W=420,H=190,p=34,st=(W-p-10)/(v.length-1),y=x=>H-30-(H-50)*(x-min)/(max-min);
-  let pts=v.map((x,i)=>[p+st*i,y(x)]),s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
-  for(let i=0;i<=3;i++){const val=max-(max-min)*i/3,yy=y(val);s+=`<line x1="${p}" x2="${W}" y1="${yy}" y2="${yy}" stroke="#edf1f4"/><text x="0" y="${yy+3}" font-size="9" fill="#9aa7b2">${val.toFixed(0)}${u}</text>`}
-  s+=`<path d="M${pts.map(q=>q.join(' ')).join(' L')} L${pts.at(-1)[0]} ${H-30} L${p} ${H-30}Z" fill="${T}" opacity=".12"/><path d="M${pts.map(q=>q.join(' ')).join(' L')}" fill="none" stroke="${T}" stroke-width="3" stroke-linejoin="round"/>`;
-  pts.forEach((q,i)=>s+=`<circle cx="${q[0]}" cy="${q[1]}" r="4" fill="${T}"><title>${labels[i]}: ${v[i]}${u}</title></circle><text x="${q[0]}" y="${H-12}" font-size="9" text-anchor="middle" fill="#7b8a99">${labels[i]}</text><text x="${q[0]}" y="${q[1]-9}" font-size="9" text-anchor="middle" fill="${N}">${v[i]}</text>`);
-  $(id).innerHTML=s+'</svg>';
-}
-function hb(id,rows,max,fmt=v=>v,flagBelow=-1){
-  $(id).innerHTML=rows.map(([l,v])=>`<div class="hb${v<flagBelow?' flag':''}"><span>${l}</span><i><u style="width:${100*v/max}%"></u></i><b>${fmt(v)}</b></div>`).join('');
-}
-function donut(id,rows){
-  const cs=[N,T,'#35c4bb','#7fa6c4','#c3d3df'];let off=0,s='<svg viewBox="0 0 42 42" role="img"><circle cx="21" cy="21" r="15.9155" fill="none" stroke="#eef2f5" stroke-width="6"/>';
-  rows.forEach(([l,v],i)=>{s+=`<circle cx="21" cy="21" r="15.9155" fill="none" stroke="${cs[i]}" stroke-width="6" stroke-dasharray="${v} ${100-v}" stroke-dashoffset="${25-off}"><title>${l}: ${v}%</title></circle>`;off+=v});
-  $(id).innerHTML='<div class="donut">'+s+'</svg><div>'+rows.map(([l,v],i)=>`<div class="hb" style="grid-template-columns:12px auto 40px"><i style="height:10px;width:10px;background:${cs[i]}"></i><span>${l}</span><b>${v}%</b></div>`).join('')+'</div></div>';
-}
-line('s1',['Jan','Feb','Mar','Apr','May','Jun'],[90.1,91.2,92.0,91.5,92.8,92.4],88,94);
-hb('s2',[['Class 6A',94.1],['Class 6B',88.2],['Class 7A',93.0],['Class 8A',92.5],['Class 9A',87.6],['Class 10A',95.3]],100,v=>v+'%',90);
-cols('s3',['Math','Science','English','Hindi','Social'],[{n:'Avg score',v:[68,72,76,74,70],c:T}],100);
-cols('s4',['Jan','Feb','Mar','Apr','May','Jun'],[{n:'Expected',v:[24,24,25,26,26,27],c:'#c3d3df'},{n:'Collected',v:[21,22,22,23,23,24],c:T}],30);
-hb('c1',[['Enquiries',842],['Contacted',690],['Demo attended',410],['Admitted',276]],842);
-donut('c2',[['Referral',31],['Walk-in',27],['Instagram',20],['Google search',14],['Pamphlets',8]]);
-hb('c3',[['JEE',96],['NEET',78],['Foundation',62],['Board prep',40]],100);
-cols('c4',['Jan','Feb','Mar','Apr','May','Jun'],[{n:'Collected',v:[16.2,17.1,17.8,18.0,18.4,18.4],c:T},{n:'Pending',v:[4.1,3.9,3.6,3.4,3.3,3.2],c:O}],20);
-
-hb('f1',[['Class 6A',91],['Class 6B',82],['Class 7A',89],['Class 8A',83],['Class 9A',80],['Class 10A',93]],100,v=>v+'%',85);
-cols('f2',['0-30','31-60','61-90','90+'],[{n:'Pending (₹ lakh)',v:[8.2,5.4,3.6,2.8],c:O}],10);
-donut('f3',[['UPI',42],['Cash',23],['Bank transfer',20],['Cheque',10],['Card',5]]);
-line('f4',['Jan','Feb','Mar','Apr','May','Jun'],[84.2,85.0,86.1,85.7,86.9,86.8],82,88);
-cols('r1',['Math','Science','English','Hindi','Social'],[{n:'Pass %',v:[91,94,97,96,95],c:T}],100);
-cols('r2',['A+','A','B','C','D'],[{n:'% of students',v:[12,26,31,21,10],c:N}],40);
-hb('r3',[['Class 6A',74],['Class 6B',66],['Class 7A',72],['Class 8A',70],['Class 9A',68],['Class 10A',77]],100,v=>v,70);
-line('r4',['Unit 1','Unit 2','Mid-term','Unit 3','Pre-final'],[66.5,68.9,70.2,71.0,71.8],64,74,'');
-$('c5').innerHTML='<table><tr><th>Counsellor</th><th>Enquiries</th><th>Admissions</th><th>Conversion</th></tr>'+[['Counsellor A',248,91],['Counsellor B',226,78],['Counsellor C',204,64],['Counsellor D',164,43]].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td><b>${(100*r[2]/r[1]).toFixed(1)}%</b></td></tr>`).join('')+'</table>';
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===b));
-  document.querySelectorAll('.dash').forEach(d=>d.classList.toggle('on',d.id===b.dataset.t));
-  history.replaceState(null,'','#'+b.dataset.t);
-});
-{const tb=document.querySelector('[data-t="'+location.hash.slice(1)+'"]');if(tb)tb.click();}
-$('year').textContent=new Date().getFullYear();
-</script>
+<script src="dash.js"></script>
 </body>
 </html>
